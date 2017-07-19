@@ -39,7 +39,7 @@ def split_train_test(array):
     indices = list(range(length))
     np.random.shuffle(indices)
     idx_train = indices[:n_train]
-    idx_test = indices[:n_train:]
+    idx_test = indices[n_train:]
 
     return sorted(array[idx_train]), sorted(array[idx_test])
 
