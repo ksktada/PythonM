@@ -49,3 +49,8 @@ expected = labels[train_size:]
 predicted = classifier.predict(images[train_size:])
 
 print('Accuracy:\n', metrics.accuracy_score(expected, predicted))
+print('\nConfusion matrix:\n', metrics.confusion_matrix(expected, predicted))
+print('\nPrecision:\n', metrics.precision_score(expected, predicted, pos_label=3))
+print('\nRecall:\n', metrics.recall_score(expected, predicted, pos_label=3))
+print('\nf-measure:\n', metrics.f1_score(expected, predicted, pos_label=3))
+
